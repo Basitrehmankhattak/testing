@@ -78,21 +78,25 @@ graph TD
 ##  Project Structure
 
 ```text
-DSP-FINAL-PROJECT/
-├── api/                    # FastAPI backend server
-├── webapp/                 # Streamlit user interface
+healthvision-diabetes-mlops/
 ├── airflow/                # Airflow home & DAG definitions
 │   └── dags/
 │       ├── data_ingestion_pipeline.py
 │       └── process_success_files_dag.py
-├── data/                   # Data processing directories
+├── api/                    # FastAPI backend server
+├── config/                 # Service configuration & Grafana setup
+├── data/                   # Ingestion & validation data directories
 │   ├── raw_data/           # Incoming CSV uploads
 │   ├── good_data/          # Schema-validated CSVs
 │   └── bad_data/           # Invalid/corrupted CSV dumps
 ├── db/                     # Master SQL schema scripts
 ├── grafana/                # Grafana dashboards & provisioning
+├── models/                 # Model artifacts (.joblib)
+├── notebooks/              # Data analysis & model exploration
+├── webapp/                 # Streamlit user interface
 ├── docker-compose.yaml     # Infrastructure: Postgres, pgAdmin, Grafana
-├── manage.sh               # Service management script
+├── manage.sh               # Primary service management script
+├── requirements.txt        # Python dependencies
 └── README.md
 ```
 ##  Quick Start & Operating Instructions
